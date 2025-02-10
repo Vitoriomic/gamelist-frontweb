@@ -1,0 +1,117 @@
+.page-welcome{
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    height: 92vh;
+    background: white;
+    color: rgb(0, 21, 61);
+    justify-content: center;
+    align-content: center;
+}
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .sub-container {
+    align-items: center;
+    gap: 3rem;
+    max-width: 450px;
+    margin: 1rem;
+  }
+
+  .container-top {
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    max-width: 450px;
+    margin: 1rem;
+  }
+
+  .text-content {
+    max-width: 700px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 1rem 13rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;  
+    max-width: 450px;
+  }
+  
+  .btn:hover {
+    background-color: #008fcc;
+    transform: scale(1.1); /* Cresce 10% ao passar o mouse */
+  }
+  
+  .image-button {
+    background-color: transparent; /* Cor do botão */
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;  
+  }
+
+  .image-button:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+  }
+
+  .illustration img {
+    max-width: 400px;
+    height: auto;
+    margin: 1rem;
+    border-radius: 50px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .illustration-top img {
+    max-width: 45px;
+    height: auto;
+  }
+
+  header {
+    display: flex;
+    background-color: #003399;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+  }

@@ -3,7 +3,7 @@
 }
 
 main {
-    height: 90vh;
+    height: 92vh;
     background: linear-gradient(180deg, rgba(0,22,80,255) 0%, #243a83 100%); /*linear-gradient(180deg, #24369b 0%, rgba(0,22,80,255) 100%); rgba(0,22,80,255);*/
     color: white;
     justify-content: center;
@@ -93,5 +93,5 @@ main {
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 10vh;
+    height: 8vh;
   }
