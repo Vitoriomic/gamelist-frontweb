@@ -1,9 +1,22 @@
+<header>
+  <div class="container-top">
+    <button [routerLink]="'/home'" class="back-home-button">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="illustration-top">
+      <img src="https://raw.githubusercontent.com/Vitoriomic/resources-game-list/refs/heads/main/resources/GameListJS2.png" alt="Ilustração genérica">
+    </div> 
+    <div class="sub-container">
+      <h3>GAME LIST</h3>
+    </div>
+  </div>
+</header>
+
 <head>
-    <!-- Adiciona Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
 <div class="game-list" cdkDropList (cdkDropListDropped)="onDragDrop($event)">
-    <div *ngFor="let game of games; trackBy: trackByGameId" cdkDrag class="game-card">
+  <div *ngFor="let game of games; trackBy: trackByGameId" class="game-card" cdkDrag (click)="openGameDetails(game.id)">
       
       <img [src]="game.imgUrl" alt="{{ game.title }}" class="game-image">
   
@@ -17,4 +30,23 @@
       </div>
     </div>
   </div>
+
+  <div *ngIf="selectedGame" class="modal-overlay" (click)="closeGameDetails()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="closeGameDetails()">✖</button>
+  
+      <div class="modal-body">
+        <div class="modal-info">
+          <h2>{{ selectedGame.title }} ({{ selectedGame.year }})</h2>
+          <img class="modal-image" [src]="selectedGame.imgUrl" alt="{{ selectedGame.title }}">
+          <p><strong>Nota: </strong> <span class="star-rating" [innerHTML]="getStarRating(selectedGame.score)"></span><i> {{ selectedGame.score }} / 5.0</i></p>
+          <p><strong>Gênero:</strong> {{ selectedGame.genre }}</p>
+          <p><strong>Plataformas:</strong> {{ selectedGame.platforms }}</p>
+          <p><strong>Descrição:</strong> {{ selectedGame.longDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
   

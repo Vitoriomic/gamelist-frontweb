@@ -3,11 +3,12 @@ import { GameService } from '../../services/game.service';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-adventurelist',
-  standalone: true, // Define como um componente standalone
-  imports: [CommonModule, DragDropModule], // Importa módulos diretamente
+  standalone: true, 
+  imports: [CommonModule, DragDropModule, RouterModule],
   templateUrl: './adventurelist.component.html',
   styleUrl: './adventurelist.component.css'
 })
@@ -31,13 +32,27 @@ export class AdventurelistComponent implements OnInit {
     }
   }
 
+  selectedGame: any = null; // Armazena o jogo selecionado para o modal
+
   openGameDetails(gameId: number): void {
-    console.log('Abrindo detalhes do jogo com ID:', gameId);
-    // Aqui você pode chamar um modal para exibir os detalhes do jogo
+    this.gameService.getGameById(gameId).subscribe(data => {
+      this.selectedGame = data; // Guarda o jogo selecionado
+    });
   }
+  
+  closeGameDetails(): void {
+    this.selectedGame = null; // Fecha o modal
+  }
+  
 
   trackByGameId(index: number, game: any): number {
     return game.id;
+  }
+ 
+  getStarRating(score: number): string {
+    const maxStars = 5;
+    const filledStars = Math.round((score / 5) * maxStars);
+    return '★'.repeat(filledStars) + '☆'.repeat(maxStars - filledStars);
   }
   
 }

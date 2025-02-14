@@ -3,7 +3,7 @@
 }
 
 main {
-    height: 92vh;
+    height: 100%;
     background: linear-gradient(180deg, rgba(0,22,80,255) 0%, #243a83 100%); /*linear-gradient(180deg, #24369b 0%, rgba(0,22,80,255) 100%); rgba(0,22,80,255);*/
     color: white;
     justify-content: center;
@@ -84,14 +84,4 @@ main {
   .illustration-top img {
     max-width: 45px;
     height: auto;
-  }
-
-  header {
-    display: flex;
-    background-color: #003399;
-    color: white;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    height: 8vh;
   }
