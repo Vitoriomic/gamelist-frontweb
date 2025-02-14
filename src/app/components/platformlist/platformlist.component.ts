@@ -33,16 +33,16 @@ export class PlatformlistComponent implements OnInit {
     }
   }
 
-  selectedGame: any = null; // Armazena o jogo selecionado para o modal
+  selectedGame: any = null;
 
   openGameDetails(gameId: number): void {
     this.gameService.getGameById(gameId).subscribe(data => {
-      this.selectedGame = data; // Guarda o jogo selecionado
+      this.selectedGame = data;
     });
   }
   
   closeGameDetails(): void {
-    this.selectedGame = null; // Fecha o modal
+    this.selectedGame = null;
   }
   
 

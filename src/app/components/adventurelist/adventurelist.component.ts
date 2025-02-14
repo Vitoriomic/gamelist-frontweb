@@ -32,16 +32,16 @@ export class AdventurelistComponent implements OnInit {
     }
   }
 
-  selectedGame: any = null; // Armazena o jogo selecionado para o modal
+  selectedGame: any = null;
 
   openGameDetails(gameId: number): void {
     this.gameService.getGameById(gameId).subscribe(data => {
-      this.selectedGame = data; // Guarda o jogo selecionado
+      this.selectedGame = data;
     });
   }
   
   closeGameDetails(): void {
-    this.selectedGame = null; // Fecha o modal
+    this.selectedGame = null;
   }
   
 
@@ -51,8 +51,8 @@ export class AdventurelistComponent implements OnInit {
  
   getStarRating(score: number): string {
     const maxStars = 5;
-    const filledStars = Math.round((score / 5) * maxStars);
-    return '★'.repeat(filledStars) + '☆'.repeat(maxStars - filledStars);
+    const filledStars = Math.floor((score / 5) * maxStars);
+    const halfStar = (score / 5) * maxStars % 1 >= 0.5 ? '★' : '☆';
+    return '★'.repeat(filledStars) + halfStar + '☆'.repeat(maxStars - filledStars - 1);
   }
-  
 }

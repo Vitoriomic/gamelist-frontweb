@@ -64,11 +64,11 @@ main {
   
   .btn:hover {
     background-color: #008fcc;
-    transform: scale(1.1); /* Cresce 10% ao passar o mouse */
+    transform: scale(1.1);
   }
   
   .image-button {
-    background-color: transparent; /* Cor do botão */
+    background-color: transparent;
     border: none;
     display: flex;
     align-items: center;

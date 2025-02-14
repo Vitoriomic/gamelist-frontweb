@@ -4,7 +4,7 @@
 
 main {
     height: 100%;
-    background: linear-gradient(180deg, rgba(0,22,80,255) 0%, #243a83 100%); /*linear-gradient(180deg, #24369b 0%, rgba(0,22,80,255) 100%); rgba(0,22,80,255);*/
+    background: linear-gradient(180deg, rgba(0,22,80,255) 0%, #243a83 100%);
     color: white;
     justify-content: center;
     align-content: center;
