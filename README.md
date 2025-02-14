@@ -1,5 +1,5 @@
 # Game List
-[![NPM](https://img.shields.io/github/license/vitoriomic/gamelist-backend)](https://github.com/Vitoriomic/gamelist-backend/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/github/license/vitoriomic/gamelist-backend)](https://github.com/Vitoriomic/gamelist-frontweb/blob/main/LICENSE) 
 
 # Sobre o projeto
 
@@ -28,7 +28,6 @@ A aplicação consiste em listas de jogos que podem ser organizados em posiçõe
 
 # Como executar o projeto
 
-## Back end
 Pré-requisitos: Angular 17+, Node.js
 
 ```bash
